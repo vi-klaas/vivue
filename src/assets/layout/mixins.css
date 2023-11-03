@@ -1,0 +1,13 @@
+/* mixins.css */
+
+@layer utilities {
+
+  .focused {
+    @apply outline-none transition-shadow duration-200 shadow-focus-ring;
+  }
+
+  .focused-inset {
+    @apply outline-none transition-shadow duration-200 shadow-focus-ring-inset;
+  }
+
+}

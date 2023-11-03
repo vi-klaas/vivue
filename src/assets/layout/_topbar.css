@@ -1,0 +1,79 @@
+/* topbar.css */
+
+@layer components {
+
+  .layout-topbar {
+    @apply fixed top-0 left-0 z-[997] w-full h-20 px-8 bg-surface-card transition-left duration-150 flex items-center shadow-sm;
+  }
+
+  .layout-topbar-logo {
+    @apply flex items-center text-surface-900 text-xl font-medium w-300 rounded-lg;
+  }
+
+  .layout-topbar-logo img {
+    @apply h-10 mr-2;
+  }
+
+  .layout-topbar-button {
+    @apply inline-flex justify-center items-center rounded-full w-12 h-12 text-text-secondary cursor-pointer transition-colors duration-150;
+  }
+
+  .layout-topbar-button:hover {
+    @apply text-text bg-surface-hover;
+  }
+
+  .layout-topbar-button i {
+    @apply text-xl;
+  }
+
+  .layout-menu-button {
+    @apply ml-8;
+  }
+
+  .layout-topbar-menu {
+    @apply m-0 p-0 list-none flex;
+  }
+
+  .layout-topbar-menu .layout-topbar-button {
+    @apply ml-4;
+  }
+
+  /* Responsive styles */
+
+  @media (max-width: 991px) {
+
+    .layout-topbar {
+      @apply justify-between;
+    }
+
+    .layout-topbar-logo {
+      @apply order-2 w-auto;
+    }
+
+    .layout-menu-button {
+      @apply order-1 ml-0;
+    }
+
+    .layout-topbar-menu-button {
+      @apply inline-flex order-3 ml-0;
+    }
+
+    .layout-topbar-menu {
+      @apply absolute right-8 top-20 w-60 bg-surface-overlay rounded-lg shadow-sm m-0 flex-col;
+    }
+
+    .layout-topbar-menu .layout-topbar-button {
+      @apply m-0 flex w-full h-auto justify-start rounded-lg p-4;
+    }
+
+    .layout-topbar-menu .layout-topbar-button i {
+      @apply text-lg mr-2;
+    }
+
+    .layout-topbar-menu .layout-topbar-button span {
+      @apply block font-medium;
+    }
+
+  }
+
+}

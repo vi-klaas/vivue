@@ -1,0 +1,96 @@
+/* menu.css */
+
+@layer components {
+
+  .layout-sidebar {
+    @apply fixed w-300 h-[calc(100vh_-_9rem)] z-999 overflow-y-auto top-28 left-8 transition-transform transition-left bg-surface-overlay rounded-lg p-2 px-6 py-4 shadow-sm;
+  }
+
+  .layout-menu {
+    @apply m-0 p-0 list-none;
+  }
+
+  .layout-root-menuitem {
+    @apply text-sm font-bold text-surface-900 my-3;
+  }
+
+  .layout-menu a {
+    @apply select-none;
+  }
+
+  .layout-menu a.active-menuitem .layout-submenu-toggler {
+    @apply rotate-180;
+  }
+
+  .layout-menu ul {
+    @apply m-0 p-0 list-none;
+  }
+
+  .layout-menu ul a {
+    @apply flex items-center relative text-text-color cursor-pointer p-3 rounded-lg transition-colors transition-shadow;
+  }
+
+  .layout-menu ul a .layout-menuitem-icon {
+    @apply mr-2;
+  }
+
+  .layout-menu ul a .layout-submenu-toggler {
+    @apply text-sm ml-auto transition-transform;
+  }
+
+  .layout-menu ul a.active-route {
+    @apply font-bold text-primary;
+  }
+
+  .layout-menu ul a:hover {
+    @apply bg-surface-hover;
+  }
+
+  /* For nested menu levels */
+  .layout-menu ul ul li a {
+    @apply ml-4;
+  }
+
+    .layout-menu ul ul ul li a {
+      @apply ml-5;
+    }
+
+    .layout-menu ul ul ul ul li a {
+      @apply ml-6;
+    }
+
+    .layout-menu ul ul ul ul ul li a {
+      @apply ml-7;
+    }
+
+    .layout-menu ul ul ul ul ul ul li a {
+      @apply ml-8;
+    }
+
+    .layout-menu ul ul ul ul ul ul ul li a {
+      @apply ml-9;
+    }
+
+    .layout-menu ul ul ul ul ul ul ul ul li a {
+      @apply ml-10;
+    }
+
+    /* ... transition classes */
+    .layout-submenu-enter-from,
+    .layout-submenu-leave-to {
+      @apply max-h-0;
+    }
+
+    .layout-submenu-enter-to,
+    .layout-submenu-leave-from {
+      @apply max-h-[1000px];
+    }
+
+    .layout-submenu-leave-active {
+      @apply overflow-hidden transition-max-h duration-450 ease-in;
+    }
+
+    .layout-submenu-enter-active {
+      @apply overflow-hidden transition-max-h duration-1000 ease-out;
+    }
+}

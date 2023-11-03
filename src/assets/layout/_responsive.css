@@ -1,0 +1,89 @@
+/* responsive.css */
+
+@layer components {
+
+  /* Extra large screens */
+  @media (min-width: 1960px) {
+    .layout-main,
+    .landing-wrapper {
+      @apply w-[1504px] mx-auto !important;
+    }
+  }
+
+  /* Large screens */
+  @media (min-width: 992px) {
+
+    .layout-wrapper.layout-overlay {
+      .layout-main-container {
+        @apply ml-0 pl-8;
+      }
+
+      .layout-sidebar {
+        @apply -translate-x-full left-0 top-0 h-screen rounded-none;
+      }
+
+      &.layout-overlay-active {
+        .layout-sidebar {
+          @apply translate-x-0;
+        }
+      }
+    }
+
+    .layout-wrapper.layout-static {
+      .layout-main-container {
+        @apply ml-[300px];
+      }
+
+      &.layout-static-inactive {
+
+        .layout-sidebar {
+          @apply -translate-x-full left-0;
+        }
+
+        .layout-main-container {
+          @apply ml-0 pl-8;
+        }
+      }
+    }
+
+    .layout-mask {
+      @apply hidden;
+    }
+
+  }
+
+  /* Small screens */
+  @media (max-width: 991px) {
+
+    .blocked-scroll {
+      @apply overflow-hidden;
+    }
+
+    .layout-wrapper {
+
+      .layout-main-container {
+        @apply ml-0 pl-8;
+      }
+
+      .layout-sidebar {
+        @apply -translate-x-full left-0 top-0 h-screen rounded-none;
+      }
+
+      .layout-mask {
+        @apply hidden fixed top-0 left-0 z-[998] w-full h-full bg-maskbg;
+      }
+
+      &.layout-mobile-active {
+        .layout-sidebar {
+          @apply translate-x-0;
+        }
+        .layout-mask {
+          @apply block animate-fadein;
+        }
+      }
+
+    }
+
+  }
+
+}

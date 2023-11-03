@@ -1,0 +1,9 @@
+/* footer.css */
+
+@layer components {
+
+  .layout-footer {
+    @apply flex items-center justify-center pt-4 border-t border-gray-200;
+  }
+
+}

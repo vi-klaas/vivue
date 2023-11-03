@@ -1,0 +1,29 @@
+/* _main.css */
+
+@layer components {
+
+  .layout-wrapper {
+    @apply min-h-screen;
+  }
+
+}
+
+@layer base {
+
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply font-sans text-gray-900 bg-gray-50 m-0 p-0 min-h-screen antialiased;
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+}
