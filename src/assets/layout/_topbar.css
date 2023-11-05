@@ -15,11 +15,11 @@
   }
 
   .layout-topbar-button {
-    @apply inline-flex justify-center items-center rounded-full w-12 h-12 text-text-secondary cursor-pointer transition-colors duration-150;
+    @apply inline-flex justify-center items-center rounded-full w-12 h-12 text-textColor-secondary cursor-pointer transition-colors duration-150;
   }
 
   .layout-topbar-button:hover {
-    @apply text-text bg-surface-hover;
+    @apply text-textColor-primary bg-surface-hover;
   }
 
   .layout-topbar-button i {

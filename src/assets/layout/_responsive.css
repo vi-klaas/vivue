@@ -78,7 +78,7 @@
           @apply translate-x-0;
         }
         .layout-mask {
-          @apply block animate-fadein;
+          @apply block animate-fadein-3;
         }
       }
 

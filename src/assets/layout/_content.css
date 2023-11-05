@@ -3,7 +3,7 @@
 @layer components {
 
   .layout-main-container {
-    @apply flex flex-col min-h-screen justify-between p-28 px-8 py-8 transition-margin duration-150;
+    @apply flex flex-col min-h-screen justify-between p-28 px-8 py-8 transition-left duration-150;
   }
 
   .layout-main {

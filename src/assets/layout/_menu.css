@@ -27,7 +27,7 @@
   }
 
   .layout-menu ul a {
-    @apply flex items-center relative text-text-color cursor-pointer p-3 rounded-lg transition-colors transition-shadow;
+    @apply flex items-center relative text-textColor-primary cursor-pointer p-3 rounded-lg transition-colors transition-shadow;
   }
 
   .layout-menu ul a .layout-menuitem-icon {
